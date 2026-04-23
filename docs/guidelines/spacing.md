@@ -1,7 +1,8 @@
 # Spacing
 
 ## Overview
-Spacing system based on a consistent base unit. All spacing values are stored in `/tokens/tokens.json`.
+
+Spacing system based on an 8px base unit. Spacing values are stored in `/tokens/tokens.json`.
 
 ## Scale
 
