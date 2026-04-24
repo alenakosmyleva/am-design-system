@@ -1,0 +1,6 @@
+{
+  "name": "theme",
+  "sourceRoot": "libs/theme/src",
+  "projectType": "library",
+  "tags": ["scope:theme"]
+}

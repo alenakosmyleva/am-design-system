@@ -1,0 +1,11 @@
+// =============================================================================
+// @am/tokens — master SCSS barrel
+// Import order: primitives first, then semantic tokens
+// =============================================================================
+
+@import 'palette';
+@import 'typography';
+@import 'spacing';
+@import 'border-radius';
+@import 'colors';
+@import 'shadows';

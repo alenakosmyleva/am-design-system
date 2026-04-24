@@ -1,0 +1,6 @@
+{
+  "name": "icons",
+  "sourceRoot": "libs/icons/src",
+  "projectType": "library",
+  "tags": ["scope:icons"]
+}

@@ -1,0 +1,207 @@
+// =============================================================================
+// Semantic design tokens — Light mode (from Figma Colors.json)
+// All 84 tokens resolved through Palette primitives
+// =============================================================================
+:root,
+[data-bs-theme="light"] {
+  // --- Button ---
+  --button-primary: #{$palette-black-minor};
+  --button-accent: #{$palette-green-2};
+  --button-hover: #{$palette-blue-black-6};
+  --button-pressed: #{$palette-blue-black-12};
+  --button-disabled: #{$palette-grey-2};
+  --button-primary-inverse: #{$palette-white-80};
+  --button-primary-on-color: #{$palette-white-80};
+  --button-disabled-add: #{$palette-grey-3};
+
+  // --- Text ---
+  --text-primary: #{$palette-black-minor};
+  --text-primary-inverse: #{$palette-white-main};
+  --text-primary-on-color: #{$palette-white-main};
+  --text-secondary: #{$palette-blue-black-70};
+  --text-tertiary: #{$palette-blue-black-50};
+  --text-quaternary: #{$palette-blue-black-44};
+  --text-disabled: #{$palette-black-24};
+  --text-disabled-inverse: #{$palette-white-24};
+  --text-priority: #{$palette-black-main};
+  --text-critical: #{$palette-red-main};
+  --text-critical-inverse: #{$palette-red-4};
+  --text-success: #{$palette-green-main};
+  --text-success-inverse: #{$palette-green-4};
+  --text-caution: #{$palette-yellow-main};
+  --text-caution-inverse: #{$palette-yellow-4};
+  --text-info: #{$palette-blue-main};
+  --text-info-inverse: #{$palette-blue-4};
+
+  // --- Icon ---
+  --icon-primary: #{$palette-blue-black-90};
+  --icon-primary-inverse: #{$palette-white-90};
+  --icon-primary-on-color: #{$palette-white-main};
+  --icon-secondary: #{$palette-blue-black-60};
+  --icon-tertiary: #{$palette-blue-black-40};
+  --icon-disabled: #{$palette-black-20};
+  --icon-disabled-inverse: #{$palette-white-20};
+  --icon-priority: #{$palette-black-minor};
+  --icon-priority-inverse: #{$palette-white-main};
+  --icon-critical: #{$palette-red-main};
+  --icon-critical-inverse: #{$palette-red-4};
+  --icon-success: #{$palette-green-main};
+  --icon-success-inverse: #{$palette-green-4};
+  --icon-caution: #{$palette-yellow-main};
+  --icon-caution-inverse: #{$palette-yellow-4};
+  --icon-info: #{$palette-blue-main};
+  --icon-info-inverse: #{$palette-blue-4};
+  --icon-debug: #{$palette-purple-main};
+  --icon-product-main: #{$palette-product-main};
+  --icon-product-red-white: #{$palette-product-main};
+  --icon-product-white-red: #{$palette-white-main};
+  --icon-product-black-white: #{$palette-black-minor};
+  --icon-product-white-black: #{$palette-white-main};
+  --icon-product-grey-white: #{$palette-grey-8};
+  --icon-product-white-grey: #{$palette-white-main};
+
+  // --- Border ---
+  --border-primary: #{$palette-blue-black-80};
+  --border-tertiary: #{$palette-blue-black-32};
+  --border-disabled: #{$palette-black-16};
+  --border-disabled-add: #{$palette-black-10};
+  --border-priority: #{$palette-black-minor};
+  --border-critical: #{$palette-red-main};
+  --border-success: #{$palette-green-main};
+  --border-caution: #{$palette-yellow-main};
+  --border-info: #{$palette-blue-main};
+
+  // --- Background ---
+  --bg-primary: #{$palette-white-main};
+  --bg-secondary: #{$palette-blue-grey-2};
+  --bg-tertiary: #{$palette-blue-grey-1};
+  --bg-quaternary: #{$palette-black-4};
+  --bg-section: #{$palette-blue-grey-4};
+
+  // --- Fill ---
+  --fill-hover: #{$palette-blue-black-6};
+  --fill-pressed: #{$palette-blue-black-12};
+  --fill-disabled: #{$palette-grey-1};
+  --fill-disabled-add: #{$palette-white-main};
+  --fill-primary: #{$palette-blue-grey-7};
+  --fill-secondary: #{$palette-blue-grey-5};
+  --fill-hint: #{$palette-grey-9};
+  --fill-switch: #{$palette-black-minor};
+  --fill-fade: #{$palette-blue-black-24};
+  --fill-fade-inverse: #{$palette-white-80};
+  --fill-critical: #{$palette-red-1};
+  --fill-success: #{$palette-green-1};
+  --fill-caution: #{$palette-yellow-1};
+  --fill-info: #{$palette-blue-1};
+  --fill-focused: #{$palette-yellow-3};
+  --fill-selected: #{$palette-blue-3};
+  --fill-debug: #{$palette-purple-1};
+
+  // --- Effects ---
+  --effects-primary: #{$palette-blue-black-24};
+  --effects-secondary: #{$palette-blue-black-8};
+  --effects-tertiary: #{$palette-blue-black-4};
+}
+
+// =============================================================================
+// Semantic design tokens — Dark mode (from Figma Colors.json)
+// =============================================================================
+[data-bs-theme="dark"] {
+  // --- Button ---
+  --button-primary: #{$palette-white-90};
+  --button-accent: #{$palette-green-8};
+  --button-hover: #{$palette-white-8};
+  --button-pressed: #{$palette-white-12};
+  --button-disabled: #{$palette-white-6};
+  --button-primary-inverse: #{$palette-black-minor};
+  --button-primary-on-color: #{$palette-white-80};
+  --button-disabled-add: #{$palette-white-8};
+
+  // --- Text ---
+  --text-primary: #{$palette-white-main};
+  --text-primary-inverse: #{$palette-black-minor};
+  --text-primary-on-color: #{$palette-white-main};
+  --text-secondary: #{$palette-white-70};
+  --text-tertiary: #{$palette-white-50};
+  --text-quaternary: #{$palette-white-44};
+  --text-disabled: #{$palette-white-24};
+  --text-disabled-inverse: #{$palette-black-24};
+  --text-priority: #{$palette-white-main};
+  --text-critical: #{$palette-red-6-80};
+  --text-critical-inverse: #{$palette-red-main};
+  --text-success: #{$palette-green-6-80};
+  --text-success-inverse: #{$palette-green-main};
+  --text-caution: #{$palette-yellow-6-80};
+  --text-caution-inverse: #{$palette-yellow-main};
+  --text-info: #{$palette-blue-6-80};
+  --text-info-inverse: #{$palette-blue-main};
+
+  // --- Icon ---
+  --icon-primary: #{$palette-white-90};
+  --icon-primary-inverse: #{$palette-black-minor};
+  --icon-primary-on-color: #{$palette-white-main};
+  --icon-secondary: #{$palette-white-60};
+  --icon-tertiary: #{$palette-white-40};
+  --icon-disabled: #{$palette-white-20};
+  --icon-disabled-inverse: #{$palette-black-20};
+  --icon-priority: #{$palette-white-main};
+  --icon-priority-inverse: #{$palette-black-minor};
+  --icon-critical: #{$palette-red-6-80};
+  --icon-critical-inverse: #{$palette-red-main};
+  --icon-success: #{$palette-green-6-80};
+  --icon-success-inverse: #{$palette-green-main};
+  --icon-caution: #{$palette-yellow-6-80};
+  --icon-caution-inverse: #{$palette-yellow-main};
+  --icon-info: #{$palette-blue-6-80};
+  --icon-info-inverse: #{$palette-blue-main};
+  --icon-debug: #{$palette-purple-6-80};
+  --icon-product-main: #{$palette-product-main};
+  --icon-product-red-white: #{$palette-white-main};
+  --icon-product-white-red: #{$palette-product-main};
+  --icon-product-black-white: #{$palette-white-main};
+  --icon-product-white-black: #{$palette-black-minor};
+  --icon-product-grey-white: #{$palette-white-main};
+  --icon-product-white-grey: #{$palette-grey-8};
+
+  // --- Border ---
+  --border-primary: #{$palette-white-80};
+  --border-tertiary: #{$palette-white-32};
+  --border-disabled: #{$palette-white-16};
+  --border-disabled-add: #{$palette-white-10};
+  --border-priority: #{$palette-white-main};
+  --border-critical: #{$palette-red-6-80};
+  --border-success: #{$palette-green-6-80};
+  --border-caution: #{$palette-yellow-6-80};
+  --border-info: #{$palette-blue-6-80};
+
+  // --- Background ---
+  --bg-primary: #{$palette-black-minor};
+  --bg-secondary: #{$palette-grey-9};
+  --bg-tertiary: #{$palette-grey-9};
+  --bg-quaternary: #{$palette-white-4};
+  --bg-section: #{$palette-black-main};
+
+  // --- Fill ---
+  --fill-hover: #{$palette-white-8};
+  --fill-pressed: #{$palette-white-12};
+  --fill-disabled: #{$palette-grey-9};
+  --fill-disabled-add: #{$palette-grey-9};
+  --fill-primary: #{$palette-grey-7};
+  --fill-secondary: #{$palette-blue-grey-5-30};
+  --fill-hint: #{$palette-grey-5};
+  --fill-switch: #{$palette-black-main};
+  --fill-fade: #{$palette-black-24};
+  --fill-fade-inverse: #{$palette-black-80};
+  --fill-critical: #{$palette-red-9};
+  --fill-success: #{$palette-green-9};
+  --fill-caution: #{$palette-yellow-9};
+  --fill-info: #{$palette-blue-9};
+  --fill-focused: #{$palette-yellow-3-30};
+  --fill-selected: #{$palette-blue-3-30};
+  --fill-debug: #{$palette-purple-9};
+
+  // --- Effects ---
+  --effects-primary: #{$palette-black-24};
+  --effects-secondary: #{$palette-black-8};
+  --effects-tertiary: #{$palette-black-4};
+}

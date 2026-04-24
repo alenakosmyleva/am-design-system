@@ -1,0 +1,17 @@
+// =============================================================================
+// Border radius tokens
+// SCSS variables (used by Bootstrap overrides) + CSS custom properties
+// =============================================================================
+
+// SCSS variables for Bootstrap
+$border-radius:    8px;
+$border-radius-sm: 4px;
+$border-radius-lg: 12px;
+$border-radius-pill: 9999px;
+
+:root {
+  --border-radius-sm: 4px;
+  --border-radius-md: 8px;
+  --border-radius-lg: 12px;
+  --border-radius-full: 9999px;
+}

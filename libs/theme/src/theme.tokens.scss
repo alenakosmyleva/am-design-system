@@ -1,0 +1,337 @@
+// =============================================================================
+// @am/theme — Master SCSS file
+//
+// This file mirrors the original custom.scss but sources token partials
+// from @am/tokens. Import order follows Bootstrap's required sequence:
+//   functions → palette → bootstrap variables → maps/mixins/root →
+//   utilities → components → utilities/api → semantic tokens →
+//   button overrides → component styles
+// =============================================================================
+
+// =============================================================================
+// 1. Include functions first (required before variable overrides)
+// =============================================================================
+@import "bootstrap/scss/functions";
+
+// =============================================================================
+// 2. Palette primitives (SCSS variables from @am/tokens)
+// =============================================================================
+@import "../../tokens/src/scss/palette";
+
+// =============================================================================
+// 3. Bootstrap SCSS variable overrides (using Palette primitives)
+// =============================================================================
+
+// --- Theme colors (used for class generation: .btn-*, .text-*, .bg-*) ---
+$primary:   $palette-black-minor;     // #333333
+$secondary: $palette-blue-grey-7;     // #aaafb9
+$success:   $palette-green-main;      // #60b076
+$info:      $palette-blue-main;       // #4a7dff
+$warning:   $palette-yellow-main;     // #ec9f00
+$danger:    $palette-red-main;        // #ff3d61
+
+// --- Typography ---
+$font-family-base: "Inter", "Helvetica", "Arial", sans-serif;
+$font-family-number: "Noto Sans", "Inter", "Helvetica", "Arial", sans-serif;
+$headings-font-weight: 500;
+
+// --- Shape ---
+$border-radius:    8px;
+$border-radius-sm: 4px;
+$border-radius-lg: 12px;
+$border-radius-pill: 9999px;
+
+// --- Button defaults (Figma size M = Bootstrap default) ---
+$btn-font-weight:    500;
+$btn-font-family:    "Inter", sans-serif;
+$btn-border-radius:  8px;
+$btn-padding-y:      10px;
+$btn-padding-x:      10px;
+$btn-font-size:      14px;
+$btn-line-height:    20px;
+
+// --- Button large (Figma size XL = Bootstrap btn-lg) ---
+$btn-padding-y-lg:   16px;
+$btn-padding-x-lg:   16px;
+$btn-font-size-lg:   16px;
+$btn-line-height-lg: 24px;
+$btn-border-radius-lg: 12px;
+
+// --- Button small (keep for compatibility) ---
+$btn-padding-y-sm:   6px;
+$btn-padding-x-sm:   8px;
+$btn-font-size-sm:   12px;
+$btn-border-radius-sm: 4px;
+
+// --- Disable default Bootstrap focus shadow ---
+$btn-focus-box-shadow: none;
+
+// =============================================================================
+// 4. Include Bootstrap variables, maps, mixins, root
+// =============================================================================
+@import "bootstrap/scss/variables";
+@import "bootstrap/scss/variables-dark";
+
+// Add "accent" color to the theme-colors map (generates .btn-accent automatically)
+$custom-colors: (
+  "accent": $palette-green-2 // #aae5bb
+);
+$theme-colors: map-merge($theme-colors, $custom-colors);
+
+@import "bootstrap/scss/maps";
+@import "bootstrap/scss/mixins";
+@import "bootstrap/scss/root";
+
+// =============================================================================
+// 5. Utilities BEFORE components (per Bootstrap docs)
+// =============================================================================
+@import "bootstrap/scss/utilities";
+
+// =============================================================================
+// 6. Include Bootstrap components
+// =============================================================================
+@import "bootstrap/scss/reboot";
+@import "bootstrap/scss/type";
+@import "bootstrap/scss/containers";
+@import "bootstrap/scss/grid";
+@import "bootstrap/scss/buttons";
+@import "bootstrap/scss/forms";
+@import "bootstrap/scss/card";
+@import "bootstrap/scss/alert";
+@import "bootstrap/scss/badge";
+@import "bootstrap/scss/tables";
+@import "bootstrap/scss/nav";
+@import "bootstrap/scss/navbar";
+@import "bootstrap/scss/transitions";
+@import "bootstrap/scss/close";
+
+// =============================================================================
+// 7. Utilities API LAST (generates utility classes)
+// =============================================================================
+@import "bootstrap/scss/utilities/api";
+
+// =============================================================================
+// 8–9. Semantic design tokens (light + dark mode CSS custom properties)
+// =============================================================================
+@import "../../tokens/src/scss/colors";
+@import "../../tokens/src/scss/typography";
+@import "../../tokens/src/scss/spacing";
+@import "../../tokens/src/scss/border-radius";
+@import "../../tokens/src/scss/shadows";
+
+// =============================================================================
+// 10. Custom button variant overrides (Figma styles via Bootstrap CSS vars)
+//     All styles reference semantic tokens — auto-switch in dark mode
+// =============================================================================
+
+// --- .btn-primary (Filled dark) ---
+.btn-primary {
+  --bs-btn-bg: var(--button-primary);
+  --bs-btn-border-color: var(--button-primary);
+  --bs-btn-color: var(--text-primary-inverse);
+  --bs-btn-hover-bg: var(--button-hover);
+  --bs-btn-hover-border-color: var(--border-primary);
+  --bs-btn-hover-color: var(--text-primary);
+  --bs-btn-active-bg: var(--button-pressed);
+  --bs-btn-active-border-color: var(--border-primary);
+  --bs-btn-active-color: var(--text-primary);
+  --bs-btn-disabled-bg: var(--button-disabled);
+  --bs-btn-disabled-border-color: var(--button-disabled);
+  --bs-btn-disabled-color: var(--text-disabled);
+}
+
+// --- .btn-accent (Filled green) ---
+.btn-accent {
+  --bs-btn-bg: var(--button-accent);
+  --bs-btn-border-color: var(--button-accent);
+  --bs-btn-color: var(--text-primary);
+  --bs-btn-hover-bg: var(--button-hover);
+  --bs-btn-hover-border-color: var(--border-primary);
+  --bs-btn-hover-color: var(--text-primary);
+  --bs-btn-active-bg: var(--button-pressed);
+  --bs-btn-active-border-color: var(--border-primary);
+  --bs-btn-active-color: var(--text-primary);
+  --bs-btn-disabled-bg: var(--button-disabled);
+  --bs-btn-disabled-border-color: var(--button-disabled);
+  --bs-btn-disabled-color: var(--text-disabled);
+
+  .btn-icon svg {
+    color: var(--icon-primary);
+  }
+}
+
+// --- .btn-outline (Outline — border only, no fill) ---
+.btn-outline {
+  --bs-btn-bg: transparent;
+  --bs-btn-border-color: var(--border-primary);
+  --bs-btn-color: var(--text-primary);
+  --bs-btn-hover-bg: var(--button-hover);
+  --bs-btn-hover-border-color: var(--border-primary);
+  --bs-btn-hover-color: var(--text-primary);
+  --bs-btn-active-bg: var(--button-pressed);
+  --bs-btn-active-border-color: var(--border-primary);
+  --bs-btn-active-color: var(--text-primary);
+  --bs-btn-disabled-bg: transparent;
+  --bs-btn-disabled-border-color: var(--border-disabled);
+  --bs-btn-disabled-color: var(--text-disabled);
+}
+
+// --- .btn-ghost (Outline + icon) ---
+.btn-ghost {
+  --bs-btn-bg: transparent;
+  --bs-btn-border-color: var(--border-primary);
+  --bs-btn-color: var(--text-primary);
+  --bs-btn-hover-bg: var(--button-hover);
+  --bs-btn-hover-border-color: var(--border-primary);
+  --bs-btn-hover-color: var(--text-primary);
+  --bs-btn-active-bg: var(--button-pressed);
+  --bs-btn-active-border-color: var(--border-primary);
+  --bs-btn-active-color: var(--text-primary);
+  --bs-btn-disabled-bg: transparent;
+  --bs-btn-disabled-border-color: var(--border-disabled);
+  --bs-btn-disabled-color: var(--text-disabled);
+}
+
+// --- .btn-text (Flat — no background, no border) ---
+.btn-text {
+  --bs-btn-bg: transparent;
+  --bs-btn-border-color: transparent;
+  --bs-btn-color: var(--text-primary);
+  --bs-btn-hover-bg: var(--button-hover);
+  --bs-btn-hover-border-color: transparent;
+  --bs-btn-hover-color: var(--text-primary);
+  --bs-btn-active-bg: var(--button-pressed);
+  --bs-btn-active-border-color: transparent;
+  --bs-btn-active-color: var(--text-primary);
+  --bs-btn-disabled-bg: transparent;
+  --bs-btn-disabled-border-color: transparent;
+  --bs-btn-disabled-color: var(--text-disabled);
+}
+
+// =============================================================================
+// 11. Focus ring (Figma: 2px outline, offset -2px)
+// =============================================================================
+.btn:focus-visible,
+.btn.pseudo-focus-visible {
+  outline: 2px solid var(--border-primary);
+  outline-offset: -2px;
+  box-shadow: none;
+}
+
+// =============================================================================
+// 12. Pseudo-state classes for Storybook showcase (static state display)
+// =============================================================================
+.btn.pseudo-hover {
+  background-color: var(--bs-btn-hover-bg);
+  border-color: var(--bs-btn-hover-border-color);
+  color: var(--bs-btn-hover-color);
+}
+
+.btn.pseudo-pressed {
+  background-color: var(--bs-btn-active-bg);
+  border-color: var(--bs-btn-active-border-color);
+  color: var(--bs-btn-active-color);
+}
+
+// =============================================================================
+// 13. Button icon styles
+// =============================================================================
+.btn-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+// Size M icon
+.btn .btn-icon {
+  width: 20px;
+  height: 20px;
+}
+
+// Size XL (btn-lg) icon
+.btn-lg .btn-icon,
+.btn-group-lg > .btn .btn-icon {
+  width: 24px;
+  height: 24px;
+}
+
+.btn .btn-icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+// Disabled icon color
+.btn:disabled .btn-icon svg,
+.btn.disabled .btn-icon svg {
+  color: var(--icon-disabled);
+}
+
+// =============================================================================
+// 14. Loading spinner (Figma: conic-gradient)
+// =============================================================================
+.btn-spinner {
+  display: inline-block;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background: conic-gradient(
+    from 90deg at 50% 50%,
+    rgba(51, 51, 51, 0.12) 0deg,
+    #333333 360deg
+  );
+  animation: btn-spin 0.8s linear infinite;
+}
+
+// Size M spinner
+.btn .btn-spinner {
+  width: 17px;
+  height: 17px;
+}
+
+// Size XL (btn-lg) spinner
+.btn-lg .btn-spinner,
+.btn-group-lg > .btn .btn-spinner {
+  width: 20px;
+  height: 20px;
+}
+
+// White spinner for dark backgrounds (primary variant)
+.btn-primary .btn-spinner {
+  background: conic-gradient(
+    from 90deg at 50% 50%,
+    rgba(255, 255, 255, 0.2) 0deg,
+    white 360deg
+  );
+}
+
+@keyframes btn-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+// =============================================================================
+// 15. Showcase grid helper (for Storybook stories)
+// =============================================================================
+.showcase-grid {
+  display: grid;
+  gap: 16px;
+  align-items: center;
+}
+
+.showcase-label {
+  font-family: "Inter", sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--text-primary);
+  opacity: 0.6;
+  white-space: nowrap;
+}
+
+.showcase-header {
+  font-family: "Inter", sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text-primary);
+  text-align: center;
+  opacity: 0.5;
+}

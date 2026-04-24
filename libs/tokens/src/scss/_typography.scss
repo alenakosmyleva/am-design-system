@@ -1,0 +1,67 @@
+// =============================================================================
+// Typography tokens
+// SCSS variables for font families + CSS custom properties for type scale
+// =============================================================================
+
+// Font family SCSS variables (used by Bootstrap overrides)
+$font-family-base: "Inter", "Helvetica", "Arial", sans-serif;
+$font-family-number: "Noto Sans", "Inter", "Helvetica", "Arial", sans-serif;
+
+:root {
+  // --- Font families ---
+  --font-family-primary: "Inter", "Helvetica", "Arial", sans-serif;
+  --font-family-number: "Noto Sans", "Inter", "Helvetica", "Arial", sans-serif;
+
+  // --- Title (Inter, Medium 500) ---
+  --title-h1-size: 28px;
+  --title-h1-weight: 500;
+  --title-h1-line-height: 40px;
+  --title-h2-size: 24px;
+  --title-h2-weight: 500;
+  --title-h2-line-height: 32px;
+  --title-h3-size: 20px;
+  --title-h3-weight: 500;
+  --title-h3-line-height: 28px;
+
+  // --- Label (Inter, Medium 500) ---
+  --label-xl-size: 20px;
+  --label-xl-weight: 500;
+  --label-xl-line-height: 28px;
+  --label-l-size: 16px;
+  --label-l-weight: 500;
+  --label-l-line-height: 24px;
+  --label-m-size: 14px;
+  --label-m-weight: 500;
+  --label-m-line-height: 20px;
+
+  // --- Body (Inter, Regular 400) ---
+  --body-xl-size: 20px;
+  --body-xl-weight: 400;
+  --body-xl-line-height: 28px;
+  --body-l-size: 16px;
+  --body-l-weight: 400;
+  --body-l-line-height: 24px;
+  --body-m-size: 14px;
+  --body-m-weight: 400;
+  --body-m-line-height: 20px;
+  --body-s-size: 13px;
+  --body-s-weight: 400;
+  --body-s-line-height: 18px;
+
+  // --- Number (Noto Sans) ---
+  --number-xxl-size: 24px;
+  --number-xxl-weight: 500;
+  --number-xxl-line-height: 32px;
+  --number-xl-size: 20px;
+  --number-xl-weight: 400;
+  --number-xl-line-height: 28px;
+  --number-l-size: 16px;
+  --number-l-weight: 400;
+  --number-l-line-height: 24px;
+  --number-l-significant-size: 16px;
+  --number-l-significant-weight: 600;
+  --number-l-significant-line-height: 24px;
+  --number-m-size: 14px;
+  --number-m-weight: 400;
+  --number-m-line-height: 20px;
+}

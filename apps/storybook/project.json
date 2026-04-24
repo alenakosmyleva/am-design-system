@@ -1,0 +1,23 @@
+{
+  "name": "storybook",
+  "sourceRoot": "apps/storybook",
+  "projectType": "application",
+  "tags": ["scope:storybook"],
+  "targets": {
+    "storybook": {
+      "executor": "@storybook/angular:start-storybook",
+      "options": {
+        "configDir": "apps/storybook/.storybook",
+        "browserTarget": "storybook:build-storybook",
+        "port": 6006
+      }
+    },
+    "build-storybook": {
+      "executor": "@storybook/angular:build-storybook",
+      "options": {
+        "configDir": "apps/storybook/.storybook",
+        "outputDir": "dist/storybook"
+      }
+    }
+  }
+}
