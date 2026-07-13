@@ -4,9 +4,10 @@
 Primary interactive element for user actions.
 
 ## Variants
-- **Primary** — main call-to-action
-- **Secondary** — alternative or less prominent actions
-- **Tertiary** — minimal emphasis, used for navigation-like actions
+- **Primary** — the high‑priority default style used for key actions and primary user flows. Provides the strongest visual hierarchy
+- **Secondary** — a reduced‑emphasis variant intended for supporting actions. Works seamlessly alongside primary and accent styles while maintaining clear interface hierarchy 
+- **Tertiary** — a minimal, low‑priority style used for auxiliary actions where reducing visual density is important
+- **Accent** — an attention‑driven style for actions that require elevated user focus or carry critical significance
 
 ## States
 - Default
