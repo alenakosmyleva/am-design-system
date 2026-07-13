@@ -35,7 +35,7 @@ Primary interactive element for user actions.
 - Don't disable buttons without explanation — use tooltips
 
 ## Figma
-<!-- Link to Figma component: -->
+<!-- [Link to Figma component:](https://www.figma.com/design/Ur3VzRrNiIEsox5cQ198ZX/UI-Kit?node-id=112-6950&t=zOKuudNfUcRcp4B0-1) -->
 
 ## Accessibility
 - Must be focusable via keyboard
