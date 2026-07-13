@@ -6,7 +6,7 @@ Primary interactive element for user actions.
 ## Variants
 - **Primary** — main call-to-action
 - **Secondary** — alternative or less prominent actions
-- **Text** — minimal emphasis, used for navigation-like actions
+- **Tertiary** — minimal emphasis, used for navigation-like actions
 
 ## States
 - Default
